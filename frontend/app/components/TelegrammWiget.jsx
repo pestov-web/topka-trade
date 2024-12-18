@@ -13,7 +13,7 @@ const TelegramLogin = () => {
     script.setAttribute("data-size", "large");
     script.setAttribute(
       "data-auth-url",
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/login`
     );
     script.setAttribute("data-request-access", "write"); // Запрос прав (опционально)
     document.getElementById("telegram-login").appendChild(script);
