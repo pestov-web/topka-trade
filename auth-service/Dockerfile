@@ -6,6 +6,7 @@ WORKDIR /auth-service
 
 # Копируем package.json и устанавливаем зависимости
 COPY package*.json ./
+RUN npm install -g pnpm
 RUN pnpm i
 
 # Копируем весь код

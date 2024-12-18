@@ -6,6 +6,7 @@ WORKDIR /frontend
 
 # Копируем package.json и устанавливаем зависимости
 COPY package*.json ./
+RUN npm install -g pnpm
 RUN pnpm i
 
 # Копируем остальной код приложения
