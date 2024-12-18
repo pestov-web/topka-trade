@@ -1,5 +1,5 @@
 import styles from "./header.module.css";
-import TelegramWiget from "../components/TelegrammWiget";
+import TelegramWidget from "../components/TelegrammWidget";
 function Header() {
   return (
     <header className={styles.header}>
@@ -27,7 +27,7 @@ function Header() {
           </ul>
         </nav>
         <div className={styles.header__actions}>
-          <TelegramWiget />
+          <TelegramWidget />
         </div>
       </div>
     </header>
