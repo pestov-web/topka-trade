@@ -1,37 +1,33 @@
 import styles from "./header.module.css";
+import TelegramWiget from "../components/TelegrammWiget";
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
         <div className={styles.header__logo}>
-          <span>TOPKA TRADE</span>
+          <span>МОШ БОМЖ</span>
         </div>
         <nav className={styles.header__nav}>
           <ul className={styles.header__nav__list}>
             <li className={styles.header__nav__list__item}>
               <a href="#" className={styles.header__nav__list__item__link}>
-                Home
+                Главная
               </a>
             </li>
             <li>
               <a href="#" className={styles.header__nav__list__item__link}>
-                About
+                Блог
               </a>
             </li>
             <li>
               <a href="#" className={styles.header__nav__list__item__link}>
-                Contact
+                Контакты
               </a>
             </li>
           </ul>
         </nav>
         <div className={styles.header__actions}>
-          <a href="#" className={styles.header__actions__login}>
-            Login
-          </a>
-          <a href="#" className={styles.header__actions__signup}>
-            Sign Up
-          </a>
+          <TelegramWiget />
         </div>
       </div>
     </header>
