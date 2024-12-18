@@ -9,7 +9,7 @@ export async function GET(req) {
 
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/me`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/me`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token.value}` },
