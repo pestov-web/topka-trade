@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
@@ -20,6 +20,6 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh -o StrictHostKeyChecking=no user@your-server-ip << 'EOF'
+          ssh -o StrictHostKeyChecking=no mwk@217.25.225.218 << 'EOF'
           /home/mwk/www/deploy.sh
           EOF
