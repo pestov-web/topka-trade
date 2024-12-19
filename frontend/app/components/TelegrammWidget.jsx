@@ -11,10 +11,7 @@ const TelegramLogin = () => {
       process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME
     ); // имя бота
     script.setAttribute("data-size", "large");
-    script.setAttribute(
-      "data-auth-url",
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/login`
-    );
+    script.setAttribute("data-auth-url", `https://devapi.pestov-web.ru/login`);
     script.setAttribute("data-request-access", "write"); // Запрос прав (опционально)
     document.getElementById("telegram-login").appendChild(script);
   }, []);
