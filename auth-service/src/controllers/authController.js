@@ -21,7 +21,7 @@ async function login(req, res) {
   }
 
   // Генерация JWT (если нужно)
-  res.status(200).json({ user });
+  res.status(200).json({ data });
 }
 
 module.exports = { login };
