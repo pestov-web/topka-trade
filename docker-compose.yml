@@ -6,21 +6,9 @@ services:
       POSTGRES_PASSWORD: password
       PPOSTGRES_MULTIPLE_DATABASES: "comments_db,polls_db,users_db,blog_db"
     ports:
-      - "5433:5433"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
-  rabbitmq:
-    image: rabbitmq:3-management
-    ports:
-      - "5673:5673"
-      - "15673:15673"
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    volumes:
-      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
-
   auth-service:
     build: ./auth-service
     ports:
