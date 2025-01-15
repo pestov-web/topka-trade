@@ -1,0 +1,79 @@
+/* Контейнер для всего списка */
+.container {
+  margin: 0 auto;
+  max-width: 1200px; /* Фиксированная ширина */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Стилизация списка */
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
+  gap: 20px;
+}
+
+/* Элементы списка */
+.listItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.listItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Верхняя часть элемента (валюта и цена) */
+.itemContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Кнопка (ссылка) */
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.link:hover {
+  background-color: #0056b3;
+}
+
+/* Для небольших экранов (адаптивность) */
+@media (max-width: 768px) {
+  .list {
+    grid-template-columns: 1fr; /* Один элемент в строке */
+  }
+}

@@ -1,0 +1,84 @@
+/* Основной контейнер с фиксированной шириной */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Центрирование страницы */
+    padding: 20px;
+    font-family: "Arial", sans-serif; /* Шрифт для элементов страницы */
+    background: #f9f9f9; /* Светлый фон */
+    border-radius: 8px; /* Скругление краёв */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* Заголовок */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333; /* Тёмно-серый текст */
+    text-transform: uppercase; /* Верхний регистр */
+    font-weight: bold;
+}
+
+/* Форма */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование элементов формы */
+    gap: 20px;
+}
+
+/* Метка для ввода */
+.label {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 500;
+    color: #444; /* Чуть более мягкий оттенок серого */
+}
+
+/* Поле ввода */
+.input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px; /* Больше пространства для текста */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    transition: border-color 0.2s ease-in-out;
+}
+
+/* Стили для фокуса ввода */
+.input:focus {
+    border-color: #0070f3; /* Цвет акцента */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 112, 243, 0.4); /* Мягкое свечение */
+}
+
+/* Кнопка */
+.button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #0070f3; /* Голубой акцент */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка при наведении */
+.button:hover {
+    background-color: #005bb5; /* Чуть более насыщенный оттенок */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Усиление тени */
+}
+
+/* Кнопка при нажатии */
+.button:active {
+    transform: scale(0.98); /* Небольшой эффект уменьшения */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}

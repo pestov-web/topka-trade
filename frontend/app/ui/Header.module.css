@@ -9,22 +9,22 @@
   margin: 0 auto;
   width: 100%;
 }
-.header__container {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__logo {
+.logo {
   font-size: 24px;
   font-weight: 600;
   color: var(--foreground);
 }
 
-.header__nav {
+.nav {
   display: flex;
 }
-.header__nav ul {
+.list {
   display: flex;
   gap: 16px;
   list-style: none;

@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styles from "./pollsList.module.css";
+import styles from "./CurrencyList.module.css";
+import Link from "next/link";
 
-const PollsList: React.FC = () => {
+const UrrencyList: React.FC = () => {
   const [bitcoinPrice, setBitcoinPrice] = useState<number | null>(null);
   const [currencyRates, setCurrencyRates] = useState<{
     EUR: number | null;
@@ -45,22 +46,29 @@ const PollsList: React.FC = () => {
   }
 
   const data = [
-    { label: "Bitcoin", value: `$${bitcoinPrice}` },
-    { label: "EUR/USD", value: currencyRates.EUR.toFixed(2) },
-    { label: "GBP/USD", value: currencyRates.GBP.toFixed(2) },
-    { label: "JPY/USD", value: currencyRates.JPY.toFixed(2) },
+    { label: "Bitcoin", value: `$${bitcoinPrice}`, id: "bitcoin" },
+    { label: "EUR/USD", value: currencyRates.EUR.toFixed(2), id: "eur" },
+    { label: "GBP/USD", value: currencyRates.GBP.toFixed(2), id: "gbp" },
+    { label: "JPY/USD", value: currencyRates.JPY.toFixed(2), id: "jpy" },
   ];
 
   return (
-    <ul className={styles.polls}>
-      {data.map((item, index) => (
-        <li key={index} className={styles.polls_item}>
-          <span>{item.label}</span>
-          <span>{item.value}</span>
-        </li>
-      ))}
-    </ul>
+      <div className={styles.container}>
+        <ul className={styles.list}>
+          {data.map((item) => (
+              <li key={item.id} className={styles.listItem}>
+                <div className={styles.itemContent}>
+                  <span className={styles.label}>{item.label}</span>
+                  <span className={styles.value}>{item.value}</span>
+                </div>
+                <Link href={`/currency/${item.id}`} className={styles.link}>
+                  Прогнозировать
+                </Link>
+              </li>
+          ))}
+        </ul>
+      </div>
   );
 };
 
-export default PollsList;
+export default UrrencyList;
