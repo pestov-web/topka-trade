@@ -1,6 +1,6 @@
 "use client";
 import React, { use,  useState, useEffect } from "react";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend,  ChartData } from "chart.js";
 import { Line } from "react-chartjs-2";
 import styles from "./CurrencyPage.module.css";
 
@@ -10,7 +10,7 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 
 const CurrencyPage = ({ params }: { params: Promise<{ id: string }> }) => {
   const [forecast, setForecast] = useState("");
-  const [chartData, setChartData] = useState<any>(null);
+  const [chartData, setChartData] = useState<ChartData<"line"> | null>(null);
   const [loading, setLoading] = useState(true);
   const { id } = use(params);
 
